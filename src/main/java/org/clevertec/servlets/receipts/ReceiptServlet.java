@@ -17,6 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.List;
 
 @WebServlet("/api/receipts")
@@ -24,7 +25,7 @@ public class ReceiptServlet extends HttpServlet {
     ReceiptProvider receiptProvider = Factory.getReceiptProvider();
     Gson gson = new GsonBuilder()
             .registerTypeAdapter(LocalDate.class, new LocalDateAdapter().nullSafe())
-            .registerTypeAdapter(LocalDate.class, new LocalTimeAdapter().nullSafe())
+            .registerTypeAdapter(LocalTime.class, new LocalTimeAdapter().nullSafe())
             .create();
 
     /**

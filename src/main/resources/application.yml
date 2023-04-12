@@ -1,0 +1,6 @@
+database:
+  create: true
+  insert: true
+  url: jdbc:postgresql://localhost:5432/store
+  user: postgres
+  password: SUP3RpostU$3R
